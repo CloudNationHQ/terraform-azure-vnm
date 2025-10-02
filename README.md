@@ -1,1 +1,1 @@
-# -terraform-azure-vnm
+# terraform-azure-vnm
