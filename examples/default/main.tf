@@ -20,7 +20,8 @@ module "rg" {
 data "azurerm_subscription" "current" {}
 
 module "virtual_network_manager" {
-  source = "../.."
+  source  = "cloudnationhq/vnm/azure"
+  version = "~> 1.0"
 
   config = {
     name                = module.naming.virtual_network_manager.name_unique
@@ -28,12 +29,5 @@ module "virtual_network_manager" {
     location            = module.rg.groups.demo.location
     scope_accesses      = ["Connectivity"]
     subscription_ids    = [data.azurerm_subscription.current.id]
-
-    network_groups = {
-      default_group = {
-        name        = "default-network-group"
-        description = "Default network group for basic connectivity"
-      }
-    }
   }
 }
