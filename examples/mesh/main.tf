@@ -29,9 +29,8 @@ module "networks" {
 data "azurerm_subscription" "current" {}
 
 module "virtual_network_manager" {
-  source = "../.."
-
-  depends_on = [module.networks]
+  source  = "cloudnationhq/vnm/azure"
+  version = "~> 1.0"
 
   config = {
     name                = module.naming.virtual_network_manager.name_unique
@@ -44,10 +43,6 @@ module "virtual_network_manager" {
       mesh_networks = {
         name        = "mesh-networks"
         description = "Network group for full mesh connectivity between all networks"
-      }
-      prod_networks = {
-        name        = "prod-networks"
-        description = "Production network group for isolated production workloads"
       }
     }
 
@@ -67,45 +62,21 @@ module "virtual_network_manager" {
         name                      = "spoke2-member"
         target_virtual_network_id = module.networks["spoke2"].vnet.id
       }
-      prod_member = {
-        network_group_key         = "prod_networks"
-        name                      = "prod-member"
-        target_virtual_network_id = module.networks["prod"].vnet.id
-      }
     }
 
     connectivity_configurations = {
       mesh = {
         name                  = "mesh-connectivity"
-        description           = "Full mesh connectivity configuration for all demo networks"
+        description           = "Full mesh connectivity configuration"
         connectivity_topology = "Mesh"
         global_mesh_enabled   = true
 
-        applies_to_groups = [
-          {
-            network_group_key   = "mesh_networks"
-            group_connectivity  = "DirectlyConnected"
-            global_mesh_enabled = true
-            use_hub_gateway     = false
-          },
-          {
-            network_group_key   = "prod_networks"
-            group_connectivity  = "DirectlyConnected"
-            global_mesh_enabled = true
-            use_hub_gateway     = false
-          }
-        ]
-      }
-    }
-
-    deployments = {
-      mesh_deployment = {
-        scope_access      = "Connectivity"
-        configuration_ids = ["mesh"]
-        triggers = {
-          connectivity_config = "mesh"
-          timestamp           = "2025-10-13"
-        }
+        applies_to_groups = [{
+          network_group_key   = "mesh_networks"
+          group_connectivity  = "DirectlyConnected"
+          global_mesh_enabled = true
+          use_hub_gateway     = false
+        }]
       }
     }
   }
