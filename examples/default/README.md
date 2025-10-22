@@ -1,1 +1,3 @@
-This example illustrates the default setup, in its simplest form.
+# Default Example
+
+This deploys a basic Azure Virtual Network Manager with minimal configuration for getting started.

@@ -2,7 +2,7 @@ module "naming" {
   source  = "cloudnationhq/naming/azure"
   version = "~> 0.24"
 
-  suffix = ["demo", "default"]
+  suffix = ["demo", "dynamic"]
 }
 
 module "rg" {
@@ -17,10 +17,21 @@ module "rg" {
   }
 }
 
+module "networks" {
+  source   = "cloudnationhq/vnet/azure"
+  version  = "~> 9.0"
+  for_each = local.vnet
+
+  naming = local.naming
+  vnet   = each.value
+}
+
 data "azurerm_subscription" "current" {}
 
 module "virtual_network_manager" {
   source = "../.."
+
+  depends_on = [module.networks]
 
   config = {
     name                = module.naming.virtual_network_manager.name_unique
@@ -30,9 +41,9 @@ module "virtual_network_manager" {
     subscription_ids    = [data.azurerm_subscription.current.id]
 
     network_groups = {
-      default_group = {
-        name        = "default-network-group"
-        description = "Default network group for basic connectivity"
+      dynamic_networks = {
+        name        = "dynamic-networks"
+        description = "Network group with dynamic membership using Azure Policy"
       }
     }
   }
