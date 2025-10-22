@@ -1,4 +1,4 @@
-# terraform-azure-vnm
+# Virtual Network Manager
 
 This terraform module simplifies the process of creating and managing Azure Virtual Network Manager with customizable options and features, offering a flexible and powerful solution for managing azure network connectivity, security, and IPAM through code.
 

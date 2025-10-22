@@ -29,9 +29,12 @@ module "networks" {
 data "azurerm_subscription" "current" {}
 
 module "virtual_network_manager" {
+    # source  = "cloudnationhq/vnm/azure"
+  # version = "~> 1.0"
+
   source = "../.."
 
-  depends_on = [module.networks]
+  # depends_on = [module.networks]
 
   config = {
     name                = module.naming.virtual_network_manager.name_unique
@@ -68,30 +71,19 @@ module "virtual_network_manager" {
     connectivity_configurations = {
       hub_spoke = {
         name                  = "hub-spoke-connectivity"
-        description           = "Hub-and-spoke connectivity configuration for dev/demo networks"
+        description           = "Hub-and-spoke connectivity configuration"
         connectivity_topology = "HubAndSpoke"
 
         applies_to_groups = [{
           network_group_key   = "all_networks"
-          group_connectivity  = "DirectlyConnected"
-          global_mesh_enabled = true
+          group_connectivity  = "None"
+          global_mesh_enabled = false
           use_hub_gateway     = false
         }]
 
         hub = {
           resource_id   = module.networks["hub"].vnet.id
           resource_type = "Microsoft.Network/virtualNetworks"
-        }
-      }
-    }
-
-    deployments = {
-      hub_spoke_deployment = {
-        scope_access      = "Connectivity"
-        configuration_ids = ["hub_spoke"]
-        triggers = {
-          connectivity_config = "hub_spoke"
-          timestamp           = "2025-10-13"
         }
       }
     }
