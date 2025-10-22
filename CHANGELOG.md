@@ -7,5 +7,16 @@
 
 * add initial structure ([ba7a836](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/ba7a836b2eb04481f3fc75c05e8647f2e4e11059))
 * **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#2](https://github.com/CloudNationHQ/terraform-azure-vnm/issues/2)) ([3580f5e](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/3580f5e28c7cbcb907feb66f2ccd5ba95a855505))
+* **deps:** bump github.com/ulikunitz/xz from 0.5.10 to 0.5.14 in /tests ([#4](https://github.com/CloudNationHQ/terraform-azure-vnm/issues/4)) ([f0ec99b](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/f0ec99b2fc5b03bdf9bd48df0120c30d8647cd2c))
+* initial commit for vnm module ([cddc01f](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/cddc01f441067f34f1303a57d758d0a7f3969bbe))
+* small adjustments ([#3](https://github.com/CloudNationHQ/terraform-azure-vnm/issues/3)) ([b998687](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/b9986875c6e013052d9ba4042db148f552a93a9d))
+
+## 1.0.0 (2025-10-22)
+
+
+### Features
+
+* add initial structure ([ba7a836](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/ba7a836b2eb04481f3fc75c05e8647f2e4e11059))
+* **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#2](https://github.com/CloudNationHQ/terraform-azure-vnm/issues/2)) ([3580f5e](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/3580f5e28c7cbcb907feb66f2ccd5ba95a855505))
 * initial commit for vnm module ([cddc01f](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/cddc01f441067f34f1303a57d758d0a7f3969bbe))
 * small adjustments ([#3](https://github.com/CloudNationHQ/terraform-azure-vnm/issues/3)) ([b998687](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/b9986875c6e013052d9ba4042db148f552a93a9d))
