@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/CloudNationHQ/terraform-azure-vnm/compare/v1.0.0...v1.1.0) (2025-11-04)
+
+
+### Features
+
+* add missing properties for routing rule collections ([#7](https://github.com/CloudNationHQ/terraform-azure-vnm/issues/7)) ([3f92180](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/3f921801b6c88d79df8d9e8c9920ff5deab9018b))
+
 ## 1.0.0 (2025-10-22)
 
 
