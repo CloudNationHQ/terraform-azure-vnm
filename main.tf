@@ -221,8 +221,9 @@ resource "azurerm_network_manager_routing_rule_collection" "routing_rule_collect
     each.key
   )
 
-  routing_configuration_id = azurerm_network_manager_routing_configuration.routing_configuration[each.value.routing_configuration_key].id
-  description              = each.value.description
+  routing_configuration_id      = azurerm_network_manager_routing_configuration.routing_configuration[each.value.routing_configuration_key].id
+  description                   = each.value.description
+  bgp_route_propagation_enabled = each.value.bgp_route_propagation_enabled
 
   network_group_ids = [
     for group_key in each.value.network_group_ids :

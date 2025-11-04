@@ -70,10 +70,11 @@ variable "config" {
       description = optional(string)
     })), {})
     routing_rule_collections = optional(map(object({
-      name                      = string
-      routing_configuration_key = string
-      network_group_ids         = list(string)
-      description               = optional(string)
+      name                          = string
+      routing_configuration_key     = string
+      network_group_ids             = list(string)
+      description                   = optional(string)
+      bgp_route_propagation_enabled = optional(bool, false)
     })), {})
     admin_configurations = optional(map(object({
       name                                          = string
