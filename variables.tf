@@ -26,6 +26,7 @@ variable "config" {
     network_groups = optional(map(object({
       name        = string
       description = optional(string)
+      member_type = optional(string, "VirtualNetwork")
     })), {})
     scope_connections = optional(map(object({
       name            = string
@@ -157,6 +158,14 @@ variable "config" {
       contains(["Connectivity", "SecurityAdmin", "Routing"], scope_access)
     ])
     error_message = "scope_accesses must only contain: 'Connectivity', 'SecurityAdmin', or 'Routing'."
+  }
+
+  validation {
+    condition = alltrue([
+      for network_group in var.config.network_groups != null ? values(var.config.network_groups) : [] :
+      coalesce(network_group.member_type, "VirtualNetwork") != "Subnet" || contains(var.config.scope_accesses, "Routing")
+    ])
+    error_message = "network_groups[*].member_type can be 'Subnet' only when scope_accesses includes 'Routing'."
   }
 
   validation {

@@ -98,6 +98,7 @@ object({
     network_groups = optional(map(object({
       name        = string
       description = optional(string)
+      member_type = optional(string, "VirtualNetwork")
     })), {})
     scope_connections = optional(map(object({
       name            = string
