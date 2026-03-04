@@ -84,6 +84,7 @@ resource "azurerm_network_manager_network_group" "network_group" {
 
   network_manager_id = azurerm_network_manager.vnm.id
   description        = each.value.description
+  member_type        = each.value.member_type
 }
 
 # scope connections
