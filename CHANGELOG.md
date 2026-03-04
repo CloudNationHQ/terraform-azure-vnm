@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/CloudNationHQ/terraform-azure-vnm/compare/v1.1.0...v1.2.0) (2026-03-04)
+
+
+### Features
+
+* update naming module version to 0.26 and add member_type to network groups ([#13](https://github.com/CloudNationHQ/terraform-azure-vnm/issues/13)) ([a7b21e5](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/a7b21e557f800b52cf51121fbf38c162fb28a80c))
+
 ## [1.1.0](https://github.com/CloudNationHQ/terraform-azure-vnm/compare/v1.0.0...v1.1.0) (2025-11-04)
 
 
