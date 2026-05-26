@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/CloudNationHQ/terraform-azure-vnm/compare/v1.2.0...v1.3.0) (2026-05-26)
+
+
+### Features
+
+* add route_table_usage_mode to routing configurations ([#16](https://github.com/CloudNationHQ/terraform-azure-vnm/issues/16)) ([432b340](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/432b340e4affc80fc5a5d6199e1bd5861e4f6772))
+* **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#11](https://github.com/CloudNationHQ/terraform-azure-vnm/issues/11)) ([c8ade8a](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/c8ade8ac5dbe60b56314afd9dc3e55105bb41385))
+
 ## [1.2.0](https://github.com/CloudNationHQ/terraform-azure-vnm/compare/v1.1.0...v1.2.0) (2026-03-04)
 
 
