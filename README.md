@@ -139,8 +139,9 @@ object({
       target_virtual_network_id = string
     })), {})
     routing_configurations = optional(map(object({
-      name        = string
-      description = optional(string)
+      name                   = string
+      description            = optional(string)
+      route_table_usage_mode = optional(string)
     })), {})
     routing_rule_collections = optional(map(object({
       name                          = string
