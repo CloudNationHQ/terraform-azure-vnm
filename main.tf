@@ -84,6 +84,7 @@ resource "azurerm_network_manager_network_group" "network_group" {
 
   network_manager_id = azurerm_network_manager.vnm.id
   description        = each.value.description
+  member_type        = each.value.member_type
 }
 
 # scope connections
@@ -205,8 +206,9 @@ resource "azurerm_network_manager_routing_configuration" "routing_configuration"
     each.key
   )
 
-  network_manager_id = azurerm_network_manager.vnm.id
-  description        = each.value.description
+  network_manager_id     = azurerm_network_manager.vnm.id
+  description            = each.value.description
+  route_table_usage_mode = each.value.route_table_usage_mode
 }
 
 # routing rule collections
