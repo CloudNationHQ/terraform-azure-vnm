@@ -22,7 +22,7 @@ module "networks" {
   version  = "~> 10.0"
   for_each = local.vnet
 
-  vnet   = each.value
+  vnet = each.value
 }
 
 data "azurerm_subscription" "current" {}
@@ -70,11 +70,11 @@ module "virtual_network_manager" {
         connectivity_topology = "HubAndSpoke"
 
         applies_to_groups = [{
-            network_group_key   = "all_networks"
-            group_connectivity  = "None"
-            global_mesh_enabled = false
-            use_hub_gateway     = false
-          }]
+          network_group_key   = "all_networks"
+          group_connectivity  = "None"
+          global_mesh_enabled = false
+          use_hub_gateway     = false
+        }]
 
         hub = {
           resource_id   = module.networks["hub"].vnet.id

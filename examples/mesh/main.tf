@@ -22,7 +22,7 @@ module "networks" {
   version  = "~> 10.0"
   for_each = local.vnet
 
-  vnet   = each.value
+  vnet = each.value
 }
 
 data "azurerm_subscription" "current" {}
@@ -71,11 +71,11 @@ module "virtual_network_manager" {
         global_mesh_enabled   = true
 
         applies_to_groups = [{
-            network_group_key   = "mesh_networks"
-            group_connectivity  = "DirectlyConnected"
-            global_mesh_enabled = true
-            use_hub_gateway     = false
-          }]
+          network_group_key   = "mesh_networks"
+          group_connectivity  = "DirectlyConnected"
+          global_mesh_enabled = true
+          use_hub_gateway     = false
+        }]
       }
     }
   }
