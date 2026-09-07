@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.0](https://github.com/CloudNationHQ/terraform-azure-vnm/compare/v1.3.0...v2.0.0) (2026-09-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* this change causes recreates
+
+### Features
+
+* azurerm provider 5 upgrade ([#22](https://github.com/CloudNationHQ/terraform-azure-vnm/issues/22)) ([123d6db](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/123d6dba0c6baf564605d8862bc2857e526c6d72))
+* **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#18](https://github.com/CloudNationHQ/terraform-azure-vnm/issues/18)) ([0a0e623](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/0a0e623c57252d4dc978d76dff8723e4d2ccc4a6))
+* **deps:** bump golang.org/x/crypto from 0.45.0 to 0.52.0 in /tests ([#20](https://github.com/CloudNationHQ/terraform-azure-vnm/issues/20)) ([1fef884](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/1fef884e73f36253c27e6aa54f446ebb1908ffa1))
+
 ## [1.3.0](https://github.com/CloudNationHQ/terraform-azure-vnm/compare/v1.2.0...v1.3.0) (2026-05-26)
 
 
