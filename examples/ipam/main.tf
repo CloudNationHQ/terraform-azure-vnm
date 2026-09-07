@@ -1,13 +1,13 @@
 module "naming" {
   source  = "cloudnationhq/naming/azure"
-  version = "~> 0.26"
+  version = "~> 0.32"
 
   suffix = ["demo", "ipam"]
 }
 
 module "rg" {
   source  = "cloudnationhq/rg/azure"
-  version = "~> 2.0"
+  version = "~> 3.0"
 
   groups = {
     demo = {
@@ -21,9 +21,9 @@ data "azurerm_subscription" "current" {}
 
 module "virtual_network_manager" {
   source  = "cloudnationhq/vnm/azure"
-  version = "~> 1.0"
+  version = "~> 2.0"
 
-  config = {
+  network_manager = {
     name                = module.naming.virtual_network_manager.name_unique
     resource_group_name = module.rg.groups.demo.name
     location            = module.rg.groups.demo.location

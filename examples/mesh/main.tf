@@ -1,13 +1,13 @@
 module "naming" {
   source  = "cloudnationhq/naming/azure"
-  version = "~> 0.26"
+  version = "~> 0.32"
 
   suffix = ["demo", "mesh"]
 }
 
 module "rg" {
   source  = "cloudnationhq/rg/azure"
-  version = "~> 2.0"
+  version = "~> 3.0"
 
   groups = {
     demo = {
@@ -19,10 +19,9 @@ module "rg" {
 
 module "networks" {
   source   = "cloudnationhq/vnet/azure"
-  version  = "~> 9.0"
+  version  = "~> 10.0"
   for_each = local.vnet
 
-  naming = local.naming
   vnet   = each.value
 }
 
@@ -30,9 +29,9 @@ data "azurerm_subscription" "current" {}
 
 module "virtual_network_manager" {
   source  = "cloudnationhq/vnm/azure"
-  version = "~> 1.0"
+  version = "~> 2.0"
 
-  config = {
+  network_manager = {
     name                = module.naming.virtual_network_manager.name_unique
     resource_group_name = module.rg.groups.demo.name
     location            = module.rg.groups.demo.location
@@ -72,14 +71,13 @@ module "virtual_network_manager" {
         global_mesh_enabled   = true
 
         applies_to_groups = [{
-          network_group_key   = "mesh_networks"
-          group_connectivity  = "DirectlyConnected"
-          global_mesh_enabled = true
-          use_hub_gateway     = false
-        }]
+            network_group_key   = "mesh_networks"
+            group_connectivity  = "DirectlyConnected"
+            global_mesh_enabled = true
+            use_hub_gateway     = false
+          }]
       }
     }
   }
 
-  naming = local.naming
 }
