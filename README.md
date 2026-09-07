@@ -31,41 +31,41 @@ The following requirements are needed by this module:
 
 - <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) (~> 1.0)
 
-- <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) (~> 4.0)
+- <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) (~> 5.0)
 
 ## Providers
 
 The following providers are used by this module:
 
-- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) (~> 4.0)
+- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) (~> 5.0)
 
 ## Resources
 
 The following resources are used by this module:
 
-- [azurerm_network_manager.vnm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager) (resource)
-- [azurerm_network_manager_admin_rule.admin_rule](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_admin_rule) (resource)
-- [azurerm_network_manager_admin_rule_collection.admin_rule_collection](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_admin_rule_collection) (resource)
-- [azurerm_network_manager_connectivity_configuration.connectivity_configuration](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_connectivity_configuration) (resource)
-- [azurerm_network_manager_deployment.deployment](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_deployment) (resource)
-- [azurerm_network_manager_ipam_pool.ipam_pool](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_ipam_pool) (resource)
-- [azurerm_network_manager_ipam_pool_static_cidr.static_cidr](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_ipam_pool_static_cidr) (resource)
-- [azurerm_network_manager_management_group_connection.management_group_connection](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_management_group_connection) (resource)
-- [azurerm_network_manager_network_group.network_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_network_group) (resource)
-- [azurerm_network_manager_routing_configuration.routing_configuration](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_routing_configuration) (resource)
-- [azurerm_network_manager_routing_rule_collection.routing_rule_collection](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_routing_rule_collection) (resource)
-- [azurerm_network_manager_scope_connection.scope_connection](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_scope_connection) (resource)
-- [azurerm_network_manager_security_admin_configuration.admin_configuration](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_security_admin_configuration) (resource)
-- [azurerm_network_manager_static_member.static_member](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_static_member) (resource)
-- [azurerm_network_manager_subscription_connection.subscription_connection](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_subscription_connection) (resource)
-- [azurerm_network_manager_verifier_workspace.verifier_workspace](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_verifier_workspace) (resource)
-- [azurerm_network_manager_verifier_workspace_reachability_analysis_intent.reachability_analysis_intent](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_verifier_workspace_reachability_analysis_intent) (resource)
+- [azurerm_network_manager.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager) (resource)
+- [azurerm_network_manager_admin_rule.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_admin_rule) (resource)
+- [azurerm_network_manager_admin_rule_collection.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_admin_rule_collection) (resource)
+- [azurerm_network_manager_connectivity_configuration.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_connectivity_configuration) (resource)
+- [azurerm_network_manager_deployment.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_deployment) (resource)
+- [azurerm_network_manager_ipam_pool.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_ipam_pool) (resource)
+- [azurerm_network_manager_ipam_pool_static_cidr.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_ipam_pool_static_cidr) (resource)
+- [azurerm_network_manager_management_group_connection.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_management_group_connection) (resource)
+- [azurerm_network_manager_network_group.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_network_group) (resource)
+- [azurerm_network_manager_routing_configuration.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_routing_configuration) (resource)
+- [azurerm_network_manager_routing_rule_collection.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_routing_rule_collection) (resource)
+- [azurerm_network_manager_scope_connection.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_scope_connection) (resource)
+- [azurerm_network_manager_security_admin_configuration.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_security_admin_configuration) (resource)
+- [azurerm_network_manager_static_member.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_static_member) (resource)
+- [azurerm_network_manager_subscription_connection.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_subscription_connection) (resource)
+- [azurerm_network_manager_verifier_workspace.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_verifier_workspace) (resource)
+- [azurerm_network_manager_verifier_workspace_reachability_analysis_intent.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_manager_verifier_workspace_reachability_analysis_intent) (resource)
 
 ## Required Inputs
 
 The following input variables are required:
 
-### <a name="input_config"></a> [config](#input\_config)
+### <a name="input_network_manager"></a> [network\_manager](#input\_network\_manager)
 
 Description: virtual network manager configuration
 
@@ -82,7 +82,7 @@ object({
     management_group_ids = optional(list(string), [])
     subscription_ids     = optional(list(string), [])
     ipam_pools = optional(map(object({
-      name             = string
+      name             = optional(string)
       address_prefixes = list(string)
       location         = optional(string)
       description      = optional(string)
@@ -90,38 +90,41 @@ object({
       parent_pool_name = optional(string)
     })), {})
     ipam_pool_static_cidrs = optional(map(object({
-      name                               = string
+      name                               = optional(string)
       pool_key                           = string
       address_prefixes                   = optional(list(string))
       number_of_ip_addresses_to_allocate = optional(number)
     })), {})
     network_groups = optional(map(object({
-      name        = string
+      name        = optional(string)
       description = optional(string)
-      member_type = optional(string, "VirtualNetwork")
+      member_type = optional(string)
     })), {})
     scope_connections = optional(map(object({
-      name            = string
+      name            = optional(string)
       target_scope_id = string
       tenant_id       = string
       description     = optional(string)
     })), {})
     management_group_connections = optional(map(object({
-      name                = string
+      name                = optional(string)
       management_group_id = string
       description         = optional(string)
     })), {})
     subscription_connections = optional(map(object({
-      name            = string
+      name            = optional(string)
       subscription_id = string
       description     = optional(string)
     })), {})
     connectivity_configurations = optional(map(object({
-      name                            = string
-      connectivity_topology           = string
-      description                     = optional(string)
-      global_mesh_enabled             = optional(bool)
-      delete_existing_peering_enabled = optional(bool)
+      name                                    = optional(string)
+      connectivity_topology                   = string
+      description                             = optional(string)
+      global_mesh_enabled                     = optional(bool)
+      delete_existing_peering_enabled         = optional(bool)
+      connected_group_address_overlap_enabled = optional(bool)
+      connected_group_private_endpoints_scale = optional(string)
+      peering_enforcement_enabled             = optional(bool)
       applies_to_groups = list(object({
         group_connectivity  = string
         network_group_key   = string
@@ -134,35 +137,35 @@ object({
       }))
     })), {})
     static_members = optional(map(object({
-      name                      = string
+      name                      = optional(string)
       network_group_key         = string
       target_virtual_network_id = string
     })), {})
     routing_configurations = optional(map(object({
-      name                   = string
+      name                   = optional(string)
       description            = optional(string)
       route_table_usage_mode = optional(string)
     })), {})
     routing_rule_collections = optional(map(object({
-      name                          = string
+      name                          = optional(string)
       routing_configuration_key     = string
       network_group_ids             = list(string)
       description                   = optional(string)
-      bgp_route_propagation_enabled = optional(bool, false)
+      bgp_route_propagation_enabled = optional(bool)
     })), {})
     admin_configurations = optional(map(object({
-      name                                          = string
+      name                                          = optional(string)
       description                                   = optional(string)
       apply_on_network_intent_policy_based_services = optional(list(string))
     })), {})
     admin_rule_collections = optional(map(object({
-      name                    = string
+      name                    = optional(string)
       admin_configuration_key = string
       network_group_ids       = list(string)
       description             = optional(string)
     })), {})
     admin_rules = optional(map(object({
-      name                      = string
+      name                      = optional(string)
       admin_rule_collection_key = string
       action                    = string
       direction                 = string
@@ -181,12 +184,12 @@ object({
       }))
     })), {})
     verifier_workspaces = optional(map(object({
-      name        = string
+      name        = optional(string)
       location    = optional(string)
       description = optional(string)
     })), {})
     reachability_analysis_intents = optional(map(object({
-      name                    = string
+      name                    = optional(string)
       verifier_workspace_key  = string
       description             = optional(string)
       source_resource_id      = string
@@ -220,14 +223,6 @@ Type: `string`
 
 Default: `null`
 
-### <a name="input_naming"></a> [naming](#input\_naming)
-
-Description: contains naming convention
-
-Type: `map(string)`
-
-Default: `{}`
-
 ### <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name)
 
 Description: default resource group to be used.
@@ -252,10 +247,6 @@ The following outputs are exported:
 
 Description: contains security admin configurations
 
-### <a name="output_config"></a> [config](#output\_config)
-
-Description: contains virtual network manager configuration
-
 ### <a name="output_connectivity_configurations"></a> [connectivity\_configurations](#output\_connectivity\_configurations)
 
 Description: contains connectivity configurations
@@ -267,6 +258,10 @@ Description: contains network manager deployments
 ### <a name="output_network_groups"></a> [network\_groups](#output\_network\_groups)
 
 Description: contains network groups configuration
+
+### <a name="output_network_manager"></a> [network\_manager](#output\_network\_manager)
+
+Description: contains virtual network manager configuration
 
 ### <a name="output_routing_configurations"></a> [routing\_configurations](#output\_routing\_configurations)
 
@@ -293,11 +288,7 @@ To update the module's documentation run `make doc`
 
 We welcome contributions from the community! Whether it's reporting a bug, suggesting a new feature, or submitting a pull request, your input is highly valued.
 
-For more information, please see our contribution [guidelines](./CONTRIBUTING.md). <br><br>
-
-<a href="https://github.com/cloudnationhq/terraform-azure-vnm/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=cloudnationhq/terraform-azure-vnm" />
-</a>
+For more information, please see our contribution [guidelines](./CONTRIBUTING.md).
 
 ## License
 
@@ -307,4 +298,3 @@ MIT Licensed. See [LICENSE](https://github.com/cloudnationhq/terraform-azure-vnm
 
 - [Documentation](https://learn.microsoft.com/en-us/azure/virtual-network-manager/)
 - [Rest Api](https://learn.microsoft.com/en-us/rest/api/networkmanager/)
-- [Rest Api Specs](https://github.com/Azure/azure-rest-api-specs/tree/1f449b5a17448f05ce1cd914f8ed75a0b568d130/specification/network)
