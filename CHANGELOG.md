@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/CloudNationHQ/terraform-azure-vnm/compare/v2.0.0...v2.1.0) (2026-10-20)
+
+
+### Features
+
+* **deps:** bump github.com/klauspost/compress in /tests ([#23](https://github.com/CloudNationHQ/terraform-azure-vnm/issues/23)) ([217d81c](https://github.com/CloudNationHQ/terraform-azure-vnm/commit/217d81cc00aacda00fbaa5a3c77581e44e846917))
+
 ## [2.0.0](https://github.com/CloudNationHQ/terraform-azure-vnm/compare/v1.3.0...v2.0.0) (2026-09-07)
 
 
